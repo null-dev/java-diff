@@ -47,7 +47,7 @@ class JavaDiff {
 			System.out.println("Options:");
 			System.out.println("	y: Always patch file even if warnings appear.");
 			System.out.println("	n: Abort on any warning.");
-			System.out.println("	b: Backup original file (with a .bak extension)..");
+			System.out.println("	b: Backup original file (with a .bak extension).");
 			System.out.println("");
 			System.out.println("Examples:");
 			System.out.println("	java -jar java-diff.jar patch binary.exe difffile.diff");
@@ -289,6 +289,8 @@ class JavaDiff {
 					//Apply the entry
 					outStream.write(Integer.parseInt(toPatch.get(byteID).to, 16));
 				}
+				//Remove the entry to make things a little faster
+				toPatch.remove(byteID);
 			} else {
 				//Nothing to patch here, move on...
 				outStream.write(Integer.parseInt(hex, 16));
