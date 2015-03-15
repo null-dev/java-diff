@@ -23,4 +23,4 @@ Java-diff prefers size over speed, it is able to patch files as large as you wan
 This is a temporary file is used while patching. It should have been deleted after the patching process but if it is still there, it means java-diff has crashed and your patch was not applied. You should remove it before starting a new operation.<br><br>
 
 # NOTE #
-Use this responsibly, I will not take responsibility of anything that happens to your program because someone has modified your program with this.!
+Use this responsibly, I will not take responsibility of anything that happens to your program because someone has modified your program with this!
