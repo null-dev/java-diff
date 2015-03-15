@@ -20,7 +20,7 @@ Examples:
 <strong>1. How large can the files I patch be?</strong><br>
 Java-diff prefers size over speed, it is able to patch files as large as you want, as long as the .diff file fits in memory!<br><br>
 <strong>2. Why does java-diff leave a [something].patch file?</strong><br>
-This file is used while patching. It should have been deleted after the patching process but it is still there, it means java-diff has crashed. You should remove it before starting a new operation.<br><br>
+This is a temporary file is used while patching. It should have been deleted after the patching process but if it is still there, it means java-diff has crashed and your patch was not applied. You should remove it before starting a new operation.<br><br>
 
 # NOTE #
 Use this responsibly, I will not take responsibility of anything that happens to your program because someone has modified your program with this.!
