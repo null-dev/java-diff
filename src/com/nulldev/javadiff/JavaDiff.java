@@ -228,7 +228,7 @@ class JavaDiff {
 							}
 						}
 					}
-					if(from != "" && to != "") {
+					if(from != "empty" && to != "empty") {
 						//Generate a patchEntry
 						PatchEntry patchEntry;
 						if(revert)
