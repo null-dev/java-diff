@@ -1,0 +1,3 @@
+<jar destfile="dist/app.jar"
+       basedir="src/"
+  />
