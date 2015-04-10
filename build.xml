@@ -1,41 +1,49 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- WARNING: Eclipse auto-generated file.
-              Any modifications will be overwritten.
-              To include a user specific buildfile here, simply create one in the same
-              directory with the processing instruction <?eclipse.ant.import?>
-              as the first entry and export the buildfile again. --><project basedir="." default="build" name="java-diff">
-    <property environment="env"/>
-    <property name="debuglevel" value="source,lines,vars"/>
-    <property name="target" value="1.7"/>
-    <property name="source" value="1.7"/>
-    <path id="java-diff.classpath">
-        <pathelement location="bin"/>
-    </path>
-    <target name="init">
-        <mkdir dir="bin"/>
-        <copy includeemptydirs="false" todir="bin">
-            <fileset dir="src">
-                <exclude name="**/*.java"/>
-            </fileset>
-        </copy>
-    </target>
-    <target name="clean">
-        <delete dir="bin"/>
-    </target>
-    <target depends="clean" name="cleanall"/>
-    <target depends="build-subprojects,build-project" name="build"/>
-    <target name="build-subprojects"/>
-    <target depends="init" name="build-project">
-        <echo message="${ant.project.name}: ${ant.file}"/>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
-            <src path="src"/>
-            <classpath refid="java-diff.classpath"/>
-        </javac>
-    </target>
-    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
-    <target name="java-diff">
-        <java classname="com.nulldev.javadiff.JavaDiff" failonerror="true" fork="yes">
-            <classpath refid="java-diff.classpath"/>
-        </java>
+<project default="create_run_jar" name="Create Runnable Jar for Project java-diff">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+	<property environment="env"/>
+	    <property name="debuglevel" value="source,lines,vars"/>
+	    <property name="target" value="1.7"/>
+	    <property name="source" value="1.7"/>
+	    <path id="java-diff.classpath">
+	        <pathelement location="bin"/>
+	    </path>
+	    <target name="init">
+	        <mkdir dir="bin"/>
+	        <copy includeemptydirs="false" todir="bin">
+	            <fileset dir="src">
+	                <exclude name="**/*.launch"/>
+	                <exclude name="**/*.java"/>
+	            </fileset>
+	        </copy>
+	    </target>
+	    <target name="clean">
+	        <delete dir="bin"/>
+	    </target>
+	    <target depends="clean" name="cleanall"/>
+	    <target depends="build-subprojects,build-project" name="build"/>
+	    <target name="build-subprojects"/>
+	    <target depends="init" name="build-project">
+	        <echo message="${ant.project.name}: ${ant.file}"/>
+	        <javac debug="true" debuglevel="${debuglevel}" destdir="bin" includeantruntime="false" source="${source}" target="${target}">
+	            <src path="src"/>
+	            <classpath refid="java-diff.classpath"/>
+	        </javac>
+	    </target>
+	    <target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+	    <target name="java-diff">
+	        <java classname="com.nulldev.javadiff.JavaDiff" failonerror="true" fork="yes">
+	            <classpath refid="java-diff.classpath"/>
+	        </java>
+	    </target>
+    <target depends="build-project" name="create_run_jar">
+        <jar destfile="dist/java-diff.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="com.nulldev.javadiff.JavaDiff"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="bin"/>
+        </jar>
     </target>
 </project>
