@@ -1,3 +1,9 @@
-<jar destfile="dist/app.jar"
+<target name="init">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="dist"/>
+    <jar destfile="dist/app.jar"
        basedir="src/"
   />
+  </target>
