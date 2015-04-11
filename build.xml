@@ -2,6 +2,7 @@
 <project default="create_run_jar" name="Create Runnable Jar for Project java-diff">
     <!--this file was created by Eclipse Runnable JAR Export Wizard-->
     <!--ANT 1.7 is required                                        -->
+    <!--THIS FILE IS MAINLY FOR MY PERSONAL USE, USE THIS AT YOUR OWN RISK-->
 	<property environment="env"/>
 	    <property name="debuglevel" value="source,lines,vars"/>
 	    <property name="target" value="1.7"/>
