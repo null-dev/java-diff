@@ -1,6 +1,9 @@
 # java-diff
 A simple java program to apply IDA .diff files to any file.
 
+# Download #
+Download old versions in the "releases" section or just download the latest at my Jenkins server here: https://jenkins-nulldev.rhcloud.com/job/java-diff/
+
 # Usage #
 ```
 Basic Usage:
@@ -15,6 +18,9 @@ Examples:
 	java -jar java-diff.jar revert binary.exe difffile.diff y
 	java -jar java-diff.jar patch binary.exe difffile.diff nb
 ```
+
+# Build Status #
+[![Build Status](https://jenkins-nulldev.rhcloud.com:443/buildStatus/icon?job=java-diff)](https://jenkins-nulldev.rhcloud.com:443/job/java-diff/)
 
 # FAQ #
 <strong>1. How large can the files I patch be?</strong><br>
