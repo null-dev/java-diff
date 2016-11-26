@@ -2,7 +2,7 @@
 A simple java program to apply IDA .diff files to any file.
 
 # Download #
-Download old versions in the "releases" section or just download the latest at my Jenkins server here: https://jenkins-nulldev.rhcloud.com/job/java-diff/
+Download old versions in the "releases" section or just download the latest at my Jenkins server here: http://ci.nulldev.xyz/job/java-diff/lastSuccessfulBuild/deployedArtifacts/
 
 # Usage #
 ```
@@ -20,7 +20,7 @@ Examples:
 ```
 
 # Build Status #
-[![Build Status](https://jenkins-nulldev.rhcloud.com:443/buildStatus/icon?job=java-diff)](https://jenkins-nulldev.rhcloud.com:443/job/java-diff/)
+[![Build Status](http://ci.nulldev.xyz/job/java-diff/badge/icon)](http://ci.nulldev.xyz/job/java-diff)
 
 # FAQ #
 <strong>1. How large can the files I patch be?</strong><br>
