@@ -1,4 +1,4 @@
-package com.nulldev.javadiff;
+package xyz.nulldev.javadiff;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -37,7 +37,6 @@ class JavaDiff {
 		File diff = null;
 		boolean backup = false;
 		HashMap<BigInteger, PatchEntry> toPatch = new HashMap<BigInteger, PatchEntry>();
-		//new BigInteger(hex, 16);
 		if(args.length == 0) {
 			//Print help
 			System.out.println("Usage:");
